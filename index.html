@@ -3,16 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    
     <link href="./styles.css" rel="stylesheet">
   </head>
   <body>
     <div class="search-top">
-      <input type="text" class="search-bar" placeholder="Ask a question">
+      <input type="text" class="search-bar" id="search_input" placeholder="Ask a question">
+      <button onclick="search_function()">Search</button>
       <h1 class="home-button">CodeMe</h1>
     </div>
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
+    <script src="./scripts//parse_search.js"></script>
   </body>
 </html>
